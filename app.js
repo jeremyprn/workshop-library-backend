@@ -4,6 +4,11 @@ var app = express();
 var Airtable = require('airtable');
 var base = new Airtable({apiKey: 'keyhJu13jNiP3qeJt'}).base('appwdRxjiToAELzWt');
 
+//Default
+app.get('/', function(req, res) {
+  res.send("Library API");
+});
+
 //Get a book
 app.get('/books/:id', function(req, res) {
 
